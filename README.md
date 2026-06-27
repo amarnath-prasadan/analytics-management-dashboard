@@ -1,13 +1,13 @@
 # 🎯 SaaS Platform Insights — Live Analytics Dashboard
 
-A highly polished, real-time analytics control center simulating active user traffic, business operations, and server telemetry. Built specifically to showcase frontend engineering mastery (performance optimization, layout stability, type integrity) to freelance clients.
+A highly polished, real-time analytics control center simulating active user traffic, business operations, and server telemetry.
 
 🚀 **Live Deployment URL:** [https://analytics-management-dashboard.vercel.app/](https://analytics-management-dashboard.vercel.app/)
 
 ---
 
 ## ⚡ Core Mechanism: Serverless "Live" Polling
-Rather than maintaining active WebSocket tunnels—which conflict with Vercel's serverless scaling and increase operational overhead—the dashboard utilizes an **independent component polling architecture**.
+
 * A Next.js API route (`/api/analytics`) serves as a deterministic mock engine, shifting metrics according to timestamp deltas.
 * The client uses **SWR (Stale-While-Revalidate)** with isolated `refreshInterval` settings to pull telemetry:
   - **Active Session Volume:** 2-second interval
